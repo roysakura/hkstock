@@ -13,7 +13,7 @@ def db_connect():
     Performs database connection using database settings from settings.py.
     Returns sqlalchemy engine instance
     """
-    return create_engine('sqlite:///{}'.format(setttings.DATABASE['db']))
+    return create_engine(URL(**settings.DATABASE))
 
 
 def create_deals_table(engine):

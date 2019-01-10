@@ -104,14 +104,12 @@ BOT_NAME = 'hkstock'
 
 SPIDER_MODULES = ['hkstock.spiders.stock']
 
-#DATABASE = {
-#    'drivername': 'mysql',
-#    'host': 'localhost',
-#    'port': '3306',
-#    'username': 'root',
-#    'password': '$Agem001',
-#    'database': 'stockinfo'
-#}
-
-DATABASE = {'db':'./hkstocks.db'}
+DATABASE = {
+    'drivername': 'mysql',
+    'host': 'localhost',
+    'port': '3306',
+    'username': 'stock',
+    'password': '494904',
+    'database': 'hkstock'
+}
 

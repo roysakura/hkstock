@@ -8,12 +8,11 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from hkstock.models import db_connect,create_deals_table,Stock
 from hkstock.items import StockItem
-import hkstock.settings as settings
 
 class StockPipeline(object):
 	"""Livingsocial pipeline for storing scraped items in the database"""
 	def __init__(self):
-		engine = create_engine('sqlite:///{}'.format(settings.DATABASE['db']))
+		engine = db_connect()
 		create_deals_table(engine)
 		self.Session = sessionmaker(bind=engine)
 
